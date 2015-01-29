@@ -103,12 +103,16 @@ code {
  */
 
 h1, h2, h3, h4, h5, h6 {
+	$timing: 0.5s;
 	font-weight: normal;
-	padding: 3px;
+	padding: 5px;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	   -moz-font-smoothing: antialiased;
 			font-smoothing: antialiased;
+	-webkit-transition: $timing background ease-in-out;
+	   -moz-transition: $timing background ease-in-out;
+	        transition: $timing background ease-in-out;
 
 	&.active {
 		background: rgba(yellow, 0.5);
