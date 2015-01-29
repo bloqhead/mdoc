@@ -20,8 +20,7 @@ body {
   z-index: 1000;
   background: #eee;
   padding: 1em;
-  border-bottom: 2px solid #d4d4d4;
-  height: 30px; }
+  border-bottom: 2px solid #d4d4d4; }
   #mdDocHeader h1 {
     font-size: 1.5em;
     border: none;
@@ -41,10 +40,12 @@ body {
     font-size: 0.8em;
     letter-spacing: 1px; }
   @media screen and (max-width: 768px) {
-    #mdDocHeader {
-      height: auto; }
-      #mdDocHeader h1 {
-        font-size: 1.2em; } }
+    #mdDocHeader h1 {
+      font-size: 1.2em; } }
+  @media screen and (max-width: 960px) {
+    #mdDocHeader .inner {
+      padding-right: 1em;
+      padding-left: 1em; } }
 
 ol.big, ul.big {
   font-size: 1.8em; }
@@ -59,10 +60,14 @@ ol.big, ul.big {
 section {
   max-width: 960px;
   margin: 0 auto;
-  padding: 5em 2em 2em 2em; }
+  padding: 5em 0 0 0; }
   @media screen and (max-width: 768px) {
     section {
       padding-top: 3em; } }
+  @media screen and (max-width: 960px) {
+    section {
+      padding-right: 1em;
+      padding-left: 1em; } }
 
 a {
   color: #148edc; }
