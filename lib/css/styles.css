@@ -5,6 +5,9 @@
 
 html {
   font-size: 1em; }
+  @media screen and (max-width: 768px) {
+    html {
+      font-size: 0.85em; } }
 
 body {
   color: #444;
@@ -57,15 +60,18 @@ ol.big, ul.big {
     ol.big, ul.big {
       font-size: 1.3em; } }
 
-section {
+body > section {
   max-width: 960px;
   margin: 0 auto;
   padding: 5em 0 0 0; }
+  body > section > h1, body > section > h2, body > section > h3, body > section > h4, body > section > h5, body > section > h6 {
+    margin-top: 0;
+    padding-top: 0; }
   @media screen and (max-width: 768px) {
-    section {
-      padding-top: 3em; } }
+    body > section {
+      padding-top: 4em; } }
   @media screen and (max-width: 960px) {
-    section {
+    body > section {
       padding-right: 1em;
       padding-left: 1em; } }
 
