@@ -77,10 +77,14 @@ code {
  */
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
+  padding: 3px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
   font-smoothing: antialiased; }
+  h1.active, h2.active, h3.active, h4.active, h5.active, h6.active {
+    background: rgba(255, 255, 0, 0.5);
+    border-radius: 3px; }
 
 h1, h2 {
   border-bottom: 2px solid #ccc; }

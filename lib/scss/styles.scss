@@ -104,10 +104,16 @@ code {
 
 h1, h2, h3, h4, h5, h6 {
 	font-weight: normal;
+	padding: 3px;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	   -moz-font-smoothing: antialiased;
 			font-smoothing: antialiased;
+
+	&.active {
+		background: rgba(yellow, 0.5);
+		border-radius: 3px;
+	}
 }
 
 h1, h2 {

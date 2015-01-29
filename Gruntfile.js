@@ -64,7 +64,7 @@ module.exports = function(grunt) {
 					'lib/coffee/**/*.coffee',
 					'md/**/*.md',
 				],
-				tasks: ['sass','coffee','md2html'],
+				tasks: ['sass','coffee','md2html','cssmin'],
 				options: {
 					livereload: true
 				}
