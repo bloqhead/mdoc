@@ -12,7 +12,7 @@ documents.
 2. Run `$ npm install`
 3. Run `$ grunt watch`
 4. Start creating markdown files and placing them in the `md` directory
-5. Go to the `docs` folder in your favorite web browser
+5. Go to the project root folder in your favorite web browser
 6. ?????
 7. PROFIT!
 
