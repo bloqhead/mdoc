@@ -9,13 +9,8 @@
 		<script>window.jQuery || document.write('<script src="lib/js/jquery-1.10.2.min.js"><\/script>')</script>
 	</head>
 	<body>
-		<header id="mdDocHeader">
-			<div class="inner">
-				<h1>Table of Contents</h1>
-			</div>
-		</header>
-
-		<section>
+		<section id="mdDocTOC">
+			<h1>Table of Contents</h1>
 			<ol class="big">
 			<?php
 			/**

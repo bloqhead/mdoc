@@ -11,20 +11,19 @@
 		<script>window.jQuery || document.write('<script src="/lib/js/jquery-1.10.2.min.js"><\/script>')</script>
 	</head>
 	<body>
-		<header id="mdDocHeader">
-			<div class="inner">
-				<div class="g-6">
-					<!-- jump menu -->
-				</div>
-				<div class="g-6">
-					<a href="/">Table of Contents</a>
-				</div>
-			</div>
-		</header>
+		<div id="mdDocContainer">
 
-		<section>
-			<%= document %>
-		</section>
+			<aside>
+				<header>
+					<h3><a href="/">Table of Contents</a></h3>
+				</header>
+			</aside>
+
+			<section>
+				<%= document %>
+			</section>
+
+		</div>
 
 		<script type="text/javascript" src="/lib/js/highlight.pack.js"></script>
 		<script type="text/javascript" src="/lib/js/main.js"></script>

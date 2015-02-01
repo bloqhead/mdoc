@@ -3,6 +3,17 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html, body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%; }
+
 html {
   font-size: 1em; }
   @media screen and (max-width: 768px) {
@@ -15,40 +26,50 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.45; }
 
-#mdDocHeader {
+#mdDocContainer > section, #mdDocContainer > aside {
+  overflow: hidden; }
+#mdDocContainer > section {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+  margin-left: 25.58941%; }
+  #mdDocContainer > section:last-child {
+    margin-right: 0; }
+#mdDocContainer > aside {
   position: fixed;
   top: 0;
-  right: 0;
   left: 0;
+  bottom: 0;
   z-index: 1000;
-  background: #eee;
-  padding: 1em;
-  border-bottom: 2px solid #d4d4d4; }
-  #mdDocHeader h1 {
-    font-size: 1.5em;
-    border: none;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%;
+  background: #333;
+  padding: 1em; }
+  #mdDocContainer > aside:last-child {
+    margin-right: 0; }
+  #mdDocContainer > aside header h3 {
+    margin: 0 0 1em 0;
+    padding: 0; }
+  #mdDocContainer > aside a {
+    color: #fff;
+    text-decoration: none;
+    display: block; }
+    #mdDocContainer > aside a:hover {
+      text-decoration: underline; }
+  #mdDocContainer > aside ul {
+    margin: 0;
     padding: 0;
-    margin: 0; }
-  #mdDocHeader .inner {
-    max-width: 960px;
-    margin: 0 auto;
-    overflow: hidden; }
-    #mdDocHeader .inner > [class^="g-"]:last-of-type {
-      text-align: right; }
-  #mdDocHeader span {
-    text-transform: uppercase;
-    margin-right: 0.5em;
-    color: #bbbbbb;
-    font-weight: 600;
-    font-size: 0.8em;
-    letter-spacing: 1px; }
-  @media screen and (max-width: 768px) {
-    #mdDocHeader h1 {
-      font-size: 1.2em; } }
-  @media screen and (max-width: 960px) {
-    #mdDocHeader .inner {
-      padding-right: 1em;
-      padding-left: 1em; } }
+    list-style: none; }
+    #mdDocContainer > aside ul a {
+      padding: 0.5em 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.25); }
+
+#mdDocTOC {
+  max-width: 960px;
+  margin: 0 auto; }
 
 ol.big, ul.big {
   font-size: 1.8em; }
@@ -59,21 +80,6 @@ ol.big, ul.big {
   @media screen and (max-width: 768px) {
     ol.big, ul.big {
       font-size: 1.3em; } }
-
-body > section {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 5em 0 0 0; }
-  body > section > h1, body > section > h2, body > section > h3, body > section > h4, body > section > h5, body > section > h6 {
-    margin-top: 0;
-    padding-top: 0; }
-  @media screen and (max-width: 768px) {
-    body > section {
-      padding-top: 4em; } }
-  @media screen and (max-width: 960px) {
-    body > section {
-      padding-right: 1em;
-      padding-left: 1em; } }
 
 a {
   color: #148edc; }
@@ -128,54 +134,5 @@ h4 {
 
 small {
   font-size: 0.75em; }
-
-[class^="g-"] {
-  float: left;
-  display: block;
-  margin-right: 4.21809%; }
-  [class^="g-"]:last-of-type {
-    margin-right: 0; }
-
-.g-1 {
-  width: 4.46675%; }
-
-.g-2 {
-  width: 13.15159%; }
-
-.g-3 {
-  width: 21.83643%; }
-
-.g-4 {
-  width: 30.52127%; }
-
-.g-5 {
-  width: 39.20611%; }
-
-.g-6 {
-  width: 47.89095%; }
-
-.g-7 {
-  width: 56.5758%; }
-
-.g-8 {
-  width: 65.26064%; }
-
-.g-9 {
-  width: 73.94548%; }
-
-.g-10 {
-  width: 82.63032%; }
-
-.g-11 {
-  width: 91.31516%; }
-
-.g-12 {
-  width: 100%;
-  display: block;
-  overflow: hidden; }
-  .g-12:after {
-    content: "";
-    display: table;
-    clear: both; }
 
 /*# sourceMappingURL=styles.css.map */
