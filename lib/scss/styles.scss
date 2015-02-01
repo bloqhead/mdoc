@@ -59,12 +59,18 @@ body {
 		@include span-columns(3);
 		background: #333;
 		padding: 1em;
+		overflow: auto;
 
 		header {
+			text-align: center;
 
-			h3 {
+			h4 {
 				margin: 0 0 1em 0;
 				padding: 0;
+			}
+
+			a {
+				display: block;
 			}
 		}
 

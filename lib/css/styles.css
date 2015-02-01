@@ -47,12 +47,17 @@ body {
   margin-right: 2.35765%;
   width: 23.23176%;
   background: #333;
-  padding: 1em; }
+  padding: 1em;
+  overflow: auto; }
   #mdDocContainer > aside:last-child {
     margin-right: 0; }
-  #mdDocContainer > aside header h3 {
-    margin: 0 0 1em 0;
-    padding: 0; }
+  #mdDocContainer > aside header {
+    text-align: center; }
+    #mdDocContainer > aside header h4 {
+      margin: 0 0 1em 0;
+      padding: 0; }
+    #mdDocContainer > aside header a {
+      display: block; }
   #mdDocContainer > aside a {
     color: #fff;
     text-decoration: none;
