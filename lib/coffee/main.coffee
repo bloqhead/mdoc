@@ -1,4 +1,10 @@
+#
 # Code highlighter
+#
+# Simple code highlighting.
+# https://highlightjs.org/
+#
+
 codeHighlighter = ->
 	if $('pre code').length
 		$('pre code').each (i, e) ->
@@ -6,7 +12,15 @@ codeHighlighter = ->
 
 codeHighlighter()
 
+#
 # Section selector
+#
+# Build the list of sidebar links automatically based
+# on the headers in the documents themselves. Since
+# md2html gives each heading an ID, this was easy
+# to accomplish.
+#
+
 sectionSelector = ->
 	if $('#mdDocContainer > aside').length
 		# Setup the ToC list
@@ -24,10 +38,26 @@ sectionSelector = ->
 		$s.find('a').on 'click', (e) ->
 			e.preventDefault()
 			$o = $(@).attr 'href'
-			$(@).toggleClass 'active'
-			$(@).siblings().removeClass 'active'
+			$p = $(@).parent('li')
+			$p.toggleClass 'active'
+			$p.siblings().removeClass 'active'
 			$($o).toggleClass 'active'
 			$($o).siblings().removeClass 'active'
 			window.location.hash = $o
 
 sectionSelector()
+
+#
+# Section hash highlighter
+#
+# Highlights the current items on page load so that
+# you can send a user a link to a section and it's
+# automatically highlighted for them.
+#
+
+sectionHighlighter = ->
+	$h = window.location.hash
+	$($h).addClass 'active'
+	$('#mdDocContainer > aside a[href="' + $h + '"]').parent('li').addClass 'active'
+
+sectionHighlighter()

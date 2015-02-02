@@ -47,12 +47,16 @@ body {
   margin-right: 2.35765%;
   width: 23.23176%;
   background: #333;
-  padding: 1em;
-  overflow: auto; }
+  overflow: auto;
+  font-size: 0.9em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-font-smoothing: antialiased !important;
+  font-smoothing: antialiased !important; }
   #mdDocContainer > aside:last-child {
     margin-right: 0; }
   #mdDocContainer > aside header {
-    text-align: center; }
+    padding: 1em; }
     #mdDocContainer > aside header h4 {
       margin: 0 0 1em 0;
       padding: 0; }
@@ -61,16 +65,23 @@ body {
   #mdDocContainer > aside a {
     color: #fff;
     text-decoration: none;
-    display: block; }
+    display: block;
+    position: relative;
+    -webkit-transition: 0.2s all;
+    -moz-transition: 0.2s all;
+    transition: 0.2s all; }
     #mdDocContainer > aside a:hover {
-      text-decoration: underline; }
+      color: #ffff4d; }
   #mdDocContainer > aside ul {
     margin: 0;
     padding: 0;
     list-style: none; }
+    #mdDocContainer > aside ul li.active a {
+      background: #ffff4d;
+      color: #000; }
     #mdDocContainer > aside ul a {
-      padding: 0.5em 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.25); }
+      padding: 0.5em;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15); }
 
 #mdDocTOC {
   max-width: 960px;
@@ -106,12 +117,12 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   padding: 5px;
   text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-  -webkit-transition: 0.5s background ease-in-out;
-  -moz-transition: 0.5s background ease-in-out;
-  transition: 0.5s background ease-in-out; }
+  -webkit-font-smoothing: antialiased !important;
+  -moz-font-smoothing: antialiased !important;
+  font-smoothing: antialiased !important;
+  -webkit-transition: 0.5s background;
+  -moz-transition: 0.5s background;
+  transition: 0.5s background; }
   h1.active, h2.active, h3.active, h4.active, h5.active, h6.active {
     background: rgba(255, 255, 0, 0.5);
     border-radius: 3px; }

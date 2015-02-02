@@ -8,6 +8,17 @@
 @import 'neat/neat';
 
 //
+// Mixins
+//
+
+@mixin smoothtext {
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased !important;
+	   -moz-font-smoothing: antialiased !important;
+			font-smoothing: antialiased !important;
+}
+
+//
 // Base styles
 //
 
@@ -58,11 +69,12 @@ body {
 		z-index: 1000;
 		@include span-columns(3);
 		background: #333;
-		padding: 1em;
 		overflow: auto;
+		font-size: 0.9em;
+		@include smoothtext;
 
 		header {
-			text-align: center;
+			padding: 1em;
 
 			h4 {
 				margin: 0 0 1em 0;
@@ -78,9 +90,11 @@ body {
 			color: #fff;
 			text-decoration: none;
 			display: block;
+			position: relative;
+			@include transition(0.2s all);
 
 			&:hover {
-				text-decoration: underline;
+				color: lighten(yellow, 15);
 			}
 		}
 
@@ -89,9 +103,20 @@ body {
 			padding: 0;
 			list-style: none;
 
+			li {
+
+				&.active {
+
+					a {
+						background: lighten(yellow, 15);
+						color: #000;
+					}
+				}
+			}
+
 			a {
-				padding: 0.5em 0;
-				border-bottom: 1px solid rgba(#fff, 0.25);
+				padding: 0.5em;
+				border-bottom: 1px solid rgba(#fff, 0.15);
 
 				&:hover {
 
@@ -148,16 +173,10 @@ code {
  */
 
 h1, h2, h3, h4, h5, h6 {
-	$timing: 0.5s;
 	font-weight: normal;
 	padding: 5px;
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-	   -moz-font-smoothing: antialiased;
-			font-smoothing: antialiased;
-	-webkit-transition: $timing background ease-in-out;
-	   -moz-transition: $timing background ease-in-out;
-	        transition: $timing background ease-in-out;
+	@include smoothtext;
+	@include transition(0.5s background);
 
 	&.active {
 		background: rgba(yellow, 0.5);
@@ -170,14 +189,14 @@ h1, h2 {
 }
 
 h1, h2, h3, h4 {
-  margin: 1.414em 0 0.5em;
-  font-weight: inherit;
-  line-height: 1.2;
+	margin: 1.414em 0 0.5em;
+	font-weight: inherit;
+	line-height: 1.2;
 }
 
 h1 {
-  margin-top: 0;
-  font-size: 3.157em;
+	margin-top: 0;
+	font-size: 3.157em;
 }
 
 h2 {

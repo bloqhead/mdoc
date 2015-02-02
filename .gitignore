@@ -1,3 +1,5 @@
 .DS_Store
 .sass-cache
+/md/Example.md
+/docs/Example.html
 /node_modules/
