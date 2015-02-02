@@ -57,7 +57,8 @@ sectionSelector()
 
 sectionHighlighter = ->
 	$h = window.location.hash
-	$($h).addClass 'active'
-	$('#mdDocContainer > aside a[href="' + $h + '"]').parent('li').addClass 'active'
+	if $h.length
+		$($h).addClass 'active'
+		$('#mdDocContainer > aside a[href="' + $h + '"]').parent('li').addClass 'active'
 
 sectionHighlighter()
