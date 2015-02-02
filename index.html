@@ -23,7 +23,7 @@
 					var $t = $(this).text().replace('.html',''),
 						$a = $(this).attr('href');
 					if( $a != '/' ) {
-						$('ol.big').append( '<li><a href="/docs/' + $a + '">' + $a + '</a></li>' );
+						$('ol.big').append( '<li><a href="/docs/' + $a + '">' + $t + '</a></li>' );
 					}
 				});
 			}
