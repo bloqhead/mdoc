@@ -12,17 +12,22 @@
 		<section id="mdDocTOC">
 			<h1>Table of Contents</h1>
 			<ol class="big">
-			<?php
-			/**
-			 * Document listing
-			 */
-			$files = glob( 'docs/*.html' );
-			$strip = array( 'docs/', '.html' );
-			foreach( $files as $file ) {
-				echo '<li><a href="' . $file . '">' . str_replace( $strip, '', $file) . '</a></li>';
-			}
-			?>
+				<!-- list of documents -->
 			</ol>
 		</section>
+		<script type="text/javascript">
+		$.ajax({
+			url: '/docs/',
+			success: function(data){
+				$(data).find('li a').each( function() {
+					var $t = $(this).text().replace('.html',''),
+						$a = $(this).attr('href');
+					if( $a != '/' ) {
+						$('ol.big').append( '<li><a href="/docs/' + $a + '">' + $a + '</a></li>' );
+					}
+				});
+			}
+		});
+		</script>
 	</body>
 </html>
