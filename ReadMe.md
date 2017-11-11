@@ -1,5 +1,7 @@
 # Markdown => HTML Doc Generator
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/bloqhead/mdoc.svg)](https://greenkeeper.io/)
+
 ## Wtf is this shit
 Just a simple way to generate documentation for a project. Good for
 handing off to a third party developer or a client. It will output
